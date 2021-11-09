@@ -1,0 +1,53 @@
+.topViewHeading {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+  h2 {
+    margin-left: 1rem;
+    font-size: 2rem;
+
+    font-weight: 600;
+  }
+}
+.topViewHeadingBanner {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  max-height: 15rem;
+  object-fit: cover;
+}
+.topViewList {
+  padding: 2rem;
+  padding-right: 0;
+}
+.topViewItem {
+  margin-bottom: 1.5rem;
+}
+.topViewItemInfo {
+  font-size: 1.4rem;
+  display: flex;
+  margin-top: 0.5rem;
+  align-items: center;
+  div {
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    img {
+      margin-right: 0.4rem;
+      width: 1rem;
+    }
+  }
+}
+
+.topViewItemLink {
+  font-size: 1.4rem;
+  color: #333333;
+
+  h3 {
+    transition: 0.2s ease;
+    font-weight: 400;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
