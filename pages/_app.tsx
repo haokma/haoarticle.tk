@@ -1,9 +1,19 @@
+import axiosClient from '@/api-client/axiosClient';
+import type { AppProps } from 'next/app';
+import { SWRConfig } from 'swr';
 import '../styles/globals.scss';
 import '../styles/Home.module.scss';
-import type { AppProps } from 'next/app';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    <SWRConfig
+      value={{
+        fetcher: (url) => axiosClient.get(url),
+      }}
+    >
+      <Component {...pageProps} />
+    </SWRConfig>
+  );
 }
 
 export default MyApp;

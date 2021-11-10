@@ -9,21 +9,21 @@ export default function Footer(props: FooterProps) {
       <div className="container">
         <div className={styles.footerWrapper}>
           <div className={styles.footerTitle}>
-            <p>© 2021 - Microvn's Blog</p>
+            <p>Blog</p>
           </div>
           <ul className={styles.navList}>
             <li className={styles.navItem}>
-              <Link href="">
+              <Link href="/">
                 <a className={styles.navLink}>LinkedIn</a>
               </Link>
             </li>
             <li className={styles.navItem}>
-              <Link href="">
+              <Link href="/">
                 <a className={styles.navLink}>Facebook</a>
               </Link>
             </li>
             <li className={styles.navItem}>
-              <Link href="">
+              <Link href="/">
                 <a className={styles.navLink}>Github</a>
               </Link>
             </li>

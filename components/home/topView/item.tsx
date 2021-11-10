@@ -1,15 +1,21 @@
 import * as React from 'react';
 import styles from './topView.module.scss';
 import Link from 'next/link';
+import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
 
-export interface TopViewItemProps {}
+dayjs.extend(relativeTime);
+export interface TopViewItemProps {
+  article: any;
+}
 
 export default function TopViewItem(props: TopViewItemProps) {
+  const { article } = props;
   return (
     <div className={styles.topViewItem}>
-      <Link href="">
+      <Link href="/">
         <a className={styles.topViewItemLink}>
-          <h3>Twitter chi tiền cho hacker tìm sự thiên vị trong thuật toán cắt ảnh</h3>
+          <h3>{article.article_title}</h3>
         </a>
       </Link>
       <div className={styles.topViewItemInfo}>
@@ -18,21 +24,21 @@ export default function TopViewItem(props: TopViewItemProps) {
             src="https://coffeeit.net/_next/static/media/eye.b670d8ac4e43421a444bc4ad289e2a02.svg"
             alt=""
           />
-          <span>1093</span>
+          <span>{article.article_views}</span>
         </div>
         <div>
           <img
             src="https://coffeeit.net/_next/static/media/time.12bf0c9171cc8676832967acf6bd0838.svg"
             alt=""
           />
-          <span>4 tháng trước</span>
+          <span>{dayjs(article.createdAt, 'YYYY-MM-DD', 'vi').fromNow()}</span>
         </div>
         <div>
           <img
             src="https://coffeeit.net/_next/static/media/source.e8b1c9a0deb890357866c7116af7156c.svg"
             alt=""
           />
-          <span>Trà đá công nghệ</span>
+          <span>{article.article_source.source_name}</span>
         </div>
       </div>
     </div>

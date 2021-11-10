@@ -1,9 +1,12 @@
 import * as React from 'react';
 import TopViewItem from './item';
 import styles from './topView.module.scss';
-export interface TopViewProps {}
+export interface TopViewProps {
+  data: any;
+}
 
 export function TopView(props: TopViewProps) {
+  const { data } = props;
   return (
     <div className={styles.topViewList}>
       <div className={styles.topViewHeading}>
@@ -18,14 +21,9 @@ export function TopView(props: TopViewProps) {
         src="https://api.coffeeit.net/storage/article_avatar/11_00_11_08_02_2021_R7MmGSa4rc.jpg"
         alt=""
       />
-      <TopViewItem />
-      <TopViewItem />
-      <TopViewItem />
-      <TopViewItem />
-      <TopViewItem />
-      <TopViewItem />
-      <TopViewItem />
-      <TopViewItem />
+      {data?.data.slice(0, 10).map((article: any, index: number) => {
+        return <TopViewItem article={article} />;
+      })}
     </div>
   );
 }

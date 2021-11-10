@@ -17,37 +17,37 @@ export function Header(props: HeaderProps) {
           <div className={styles.headerNav}>
             <ul className={styles.navList}>
               <li className={styles.navItem}>
-                <Link href="">
+                <Link href="/">
                   <a className={styles.navLink}>Trang chủ</a>
                 </Link>
               </li>
               <li className={styles.navItem}>
-                <Link href="">
+                <Link href="/">
                   <a className={styles.navLink}>Thể thao</a>
                 </Link>
               </li>
               <li className={styles.navItem}>
-                <Link href="">
+                <Link href="/">
                   <a className={styles.navLink}>Đời sống</a>
                 </Link>
               </li>
               <li className={styles.navItem}>
-                <Link href="">
+                <Link href="/">
                   <a className={styles.navLink}>Đời sống</a>
                 </Link>
               </li>
               <li className={styles.navItem}>
-                <Link href="">
+                <Link href="/">
                   <a className={styles.navLink}>Đời sống</a>
                 </Link>
               </li>
               <li className={styles.navItem}>
-                <Link href="">
+                <Link href="/">
                   <a className={styles.navLink}>Đời sống</a>
                 </Link>
               </li>
               <li className={styles.navItem}>
-                <Link href="">
+                <Link href="/">
                   <a className={`${styles.navLink} ${styles.active}`}>Công nghệ</a>
                 </Link>
               </li>

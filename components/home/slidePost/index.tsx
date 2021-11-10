@@ -22,13 +22,13 @@ export function SlidePost(props: SlidePostProps) {
             </div>
             <div className="col-xl-4">
               <div className={styles.right}>
-                <Link href="">
+                <Link href="/">
                   <a>
                     <p className={styles.tags}>Trà đá công nghệ</p>
                   </a>
                 </Link>
 
-                <Link href="">
+                <Link href="/">
                   <a>
                     <h2 className={styles.title}>
                       Không đợi tiêm hết vaccine, sạch ca nhiễm cộng đồng mới cho trẻ đến trường
