@@ -3,13 +3,8 @@ import Footer from '@/components/common/footer';
 import { SlidePost } from '@/components/home';
 import { TopView } from '@/components/home/topView';
 import type { NextPage } from 'next';
-import useSWR from 'swr';
-import { GetStaticProps } from 'next';
-import { articleApi } from '../api-client';
 
-const Home: NextPage = () => {
-  const { data } = useSWR('/article');
-  console.log(data);
+const Home: NextPage = ({ article }: any) => {
   return (
     <div className="main">
       <Header />
@@ -24,12 +19,12 @@ const Home: NextPage = () => {
       >
         <div className="row">
           <div className="col-xl-8">
-            {data?.data.map((article: any, index: number) => {
-              return <ArticleItem article={article} key={index} />;
+            {article?.data.map((item: any, index: number) => {
+              return <ArticleItem article={item} key={index} />;
             })}
           </div>
           <div className="col-xl-4">
-            <TopView data={data} />
+            <TopView data={article} />
           </div>
         </div>
       </div>
@@ -37,5 +32,14 @@ const Home: NextPage = () => {
     </div>
   );
 };
-
+export async function getStaticProps() {
+  // `getStaticProps` is executed on the server side.
+  const res = await fetch('http://localhost:5000/api/article?page=1limit=10');
+  const article = await res.json();
+  return {
+    props: {
+      article,
+    },
+  };
+}
 export default Home;

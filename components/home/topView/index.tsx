@@ -22,7 +22,7 @@ export function TopView(props: TopViewProps) {
         alt=""
       />
       {data?.data.slice(0, 10).map((article: any, index: number) => {
-        return <TopViewItem article={article} />;
+        return <TopViewItem article={article} key={index} />;
       })}
     </div>
   );
