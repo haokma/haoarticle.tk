@@ -30,7 +30,7 @@ export function ArticleItem(props: ArticleItemProps) {
               </a>
             </Link>
 
-            <Link href="/">
+            <Link href={`/${article.article_slug}`}>
               <a>
                 <h2 className={styles.title}>{article.article_title}</h2>
               </a>
