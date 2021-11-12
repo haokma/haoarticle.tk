@@ -6,7 +6,7 @@ export interface HeaderProps {}
 export function Header(props: HeaderProps) {
   return (
     <div className={styles.header}>
-      <div className="container p-0">
+      <div className="container">
         <div className={styles.headerWrapper}>
           <div className={styles.headerLogo}>
             <Link href="/">
