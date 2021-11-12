@@ -12,7 +12,9 @@ const Home: NextPage = ({ data, pagination }: any) => {
   const loadMore = async () => {
     setLoading(true);
     try {
-      const res = await fetch(`${process.env.API_URL}/api/article?page=${page + 1}&limit=10`);
+      const res = await fetch(
+        `https://article01.herokuapp.com/api/article?page=${page + 1}&limit=10`
+      );
       const articleData = await res.json();
       setArtile([...article, ...articleData.data]);
       setPage(page + 1);
