@@ -16,12 +16,20 @@
 .title {
   font-size: 2rem;
   font-weight: 600;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 .excerpt {
   font-size: 1.4rem;
   color: #7d7d7d;
   margin-top: 0.5rem;
   line-height: 1.4;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 .tags {
   font-size: 1.4rem;
@@ -46,5 +54,11 @@
   span {
     display: block;
     color: #6b6b6b;
+  }
+}
+
+@media (max-width: 992px) {
+  .image img {
+    min-height: 17rem;
   }
 }

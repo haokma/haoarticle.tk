@@ -15,14 +15,14 @@ export function ArticleItem(props: ArticleItemProps) {
   return (
     <div className={styles.ArticleItem}>
       <div className="row">
-        <div className="col-xl-4">
+        <div className="col-xl-4 col-lg-4 col-md-4 col-sm-6">
           <div className={styles.left}>
             <div className={styles.image}>
               <img src={article.article_thumbnail} alt="" />
             </div>
           </div>
         </div>
-        <div className="col-xl-8">
+        <div className="col-xl-8 col-lg-8 col-md-8 col-sm-6">
           <div className={styles.right}>
             <Link href="/">
               <a>

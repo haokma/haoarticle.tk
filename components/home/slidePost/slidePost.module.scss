@@ -1,9 +1,10 @@
 .right {
   padding-top: 2.5rem;
-  padding: 2rem;
 }
 .image img {
   border-radius: 1rem;
+  width: 100%;
+  object-fit: cover;
 }
 
 .title {
@@ -40,4 +41,7 @@
     display: block;
     color: #6b6b6b;
   }
+}
+.SlidePost {
+  margin-bottom: 4rem;
 }

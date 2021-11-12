@@ -21,7 +21,7 @@ export function TopView(props: TopViewProps) {
         src="https://api.coffeeit.net/storage/article_avatar/11_00_11_08_02_2021_R7MmGSa4rc.jpg"
         alt=""
       />
-      {data?.data.slice(0, 10).map((article: any, index: number) => {
+      {data.slice(0, 10).map((article: any, index: number) => {
         return <TopViewItem article={article} key={index} />;
       })}
     </div>

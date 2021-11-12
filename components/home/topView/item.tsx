@@ -13,7 +13,7 @@ export default function TopViewItem(props: TopViewItemProps) {
   const { article } = props;
   return (
     <div className={styles.topViewItem}>
-      <Link href="/">
+      <Link href={`/${article.article_slug}`}>
         <a className={styles.topViewItemLink}>
           <h3>{article.article_title}</h3>
         </a>
