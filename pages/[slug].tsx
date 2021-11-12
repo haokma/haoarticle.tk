@@ -12,20 +12,14 @@ export default function ArticleDetail(props: ArticleDetailProps) {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Chia sẻ kiến thức về lập trình và An toàn thông tin" />
-        <meta property="og:title" content={`Lập trình và An toàn thông tin | ${'KmaIT.tk'}`} />
-        <meta
-          property="og:description"
-          content="Blog chia sẻ kiến thức Lập trình và An toàn thông tin"
-        />
+        <meta name="description" content={article.article_excerpt} />
+        <meta property="og:title" content={article.article_title} />
+        <meta property="og:description" content={article.article_content} />
         <meta property="og:type" content="webiste" />
-        <meta property="og:image" content={`${'https://www.kmait.tk/'}static/images/haolux.jpg`} />
-        <meta
-          property="og:image:secure_url"
-          content={`${'https://www.kmait.tk/'}static/images/haolux.jpg`}
-        />
+        <meta property="og:image" content={article.article_thumbnail} />
+        <meta property="og:image:secure_url" content={article.article_thumbnail} />
         <meta property="og:image:type" content="image/jpg" />
-        <title>KmaIT - Lập trình & An Toàn Thông Tin Blog</title>
+        <title>{article.article_title}</title>
       </Head>
       <div className="article-detail">
         <div className="row">

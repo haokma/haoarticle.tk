@@ -27,11 +27,14 @@ const Home: NextPage = ({ data, pagination }: any) => {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Chia sẻ kiến thức về lập trình và An toàn thông tin" />
+        <meta
+          name="description"
+          content="Luxury.tk - Chuyên trang tổng hợp những bài viết tin tức về công nghệ, lập trình IT"
+        />
         <meta property="og:title" content={`Lập trình và An toàn thông tin | ${'KmaIT.tk'}`} />
         <meta
           property="og:description"
-          content="Blog chia sẻ kiến thức Lập trình và An toàn thông tin"
+          content="Luxury.tk là website tin tức chuyên tổng hợp từ các website khác nhau về nghành công nghệ thông tin, website không mang tính thương mại , website luôn ghi rõ nguồn bài viết và tôn trọng tác quyền các bài viết đó"
         />
         <meta property="og:type" content="webiste" />
         <meta property="og:image" content={`${'https://www.kmait.tk/'}static/images/haolux.jpg`} />
@@ -40,7 +43,7 @@ const Home: NextPage = ({ data, pagination }: any) => {
           content={`${'https://www.kmait.tk/'}static/images/haolux.jpg`}
         />
         <meta property="og:image:type" content="image/jpg" />
-        <title>KmaIT - Lập trình & An Toàn Thông Tin Blog</title>
+        <title>Luxury - Trang tin tức 24/7</title>
       </Head>
       <div className="main">
         <div className="home-page">
