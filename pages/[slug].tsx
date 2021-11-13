@@ -2,12 +2,14 @@ import * as React from 'react';
 import renderHTML from 'html-react-parser';
 import Link from 'next/link';
 import Head from 'next/head';
+import { useRouter } from 'next/dist/client/router';
 export interface ArticleDetailProps {
   article: any;
 }
 
 export default function ArticleDetail(props: ArticleDetailProps) {
   const { article } = props;
+
   return (
     <>
       <Head>
@@ -51,7 +53,7 @@ export async function getStaticPaths() {
 
   // We'll pre-render only these paths at build time.
   // { fallback: false } means other routes should 404.
-  return { paths, fallback: false };
+  return { paths, fallback: 'blocking' };
 }
 
 export async function getStaticProps({ params }: any) {
