@@ -29,11 +29,11 @@ const Home: NextPage = ({ data, pagination }: any) => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
-          content="Baovietnam.tk - Chuyên trang tổng hợp những bài viết tin tức về công nghệ, lập trình IT"
+          content="Baovietnam.tk - Trang chuyên tổng hợp những bài viết tin tức mới nhất trong nước và quốc tế"
         />
         <meta
           property="og:title"
-          content="Baovietnam.tk - Chuyên trang tổng hợp những bài viết tin tức về công nghệ, lập trình IT"
+          content="Baovietnam.tk - Trang chuyên tổng hợp những bài viết tin tức mới nhất trong nước và quốc tế"
         />
         <meta
           property="og:description"
