@@ -14,9 +14,9 @@ export default function ArticleDetail(props: ArticleDetailProps) {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content={article.article_excerpt} />
+        <meta name="description" content={renderHTML(article.article_excerpt) as string} />
         <meta property="og:title" content={article.article_title} />
-        <meta property="og:description" content={article.article_content} />
+        <meta property="og:description" content={renderHTML(article.article_content) as string} />
         <meta property="og:type" content="webiste" />
         <meta property="og:image" content={article.article_thumbnail} />
         <meta property="og:image:secure_url" content={article.article_thumbnail} />
