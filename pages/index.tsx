@@ -29,15 +29,15 @@ const Home: NextPage = ({ data, pagination }: any) => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
-          content="Baovietnam.tk - Trang chuyên tổng hợp những bài viết tin tức mới nhất trong nước và quốc tế"
+          content="Tinhot.tk - Trang chuyên tổng hợp những bài viết tin tức mới nhất trong nước và quốc tế"
         />
         <meta
           property="og:title"
-          content="Baovietnam.tk - Trang chuyên tổng hợp những bài viết tin tức mới nhất trong nước và quốc tế"
+          content="Tinhot.tk - Trang chuyên tổng hợp những bài viết tin tức mới nhất trong nước và quốc tế"
         />
         <meta
           property="og:description"
-          content="Baovietnam.tk là website tin tức chuyên tổng hợp từ các website khác nhau về nghành công nghệ thông tin, website không mang tính thương mại , website luôn ghi rõ nguồn bài viết và tôn trọng tác quyền các bài viết đó"
+          content="Tinhot.tk là website tin tức chuyên tổng hợp từ các website khác nhau về nghành công nghệ thông tin, website không mang tính thương mại , website luôn ghi rõ nguồn bài viết và tôn trọng tác quyền các bài viết đó"
         />
         <meta property="og:type" content="webiste" />
         <meta
@@ -49,7 +49,7 @@ const Home: NextPage = ({ data, pagination }: any) => {
           content={`https://microvn.net/_next/image?url=https://service.microvn.net/content/images/2021/11/ddn2714-crop-1635936936205.jpeg&w=1040&q=80`}
         />
         <meta property="og:image:type" content="image/jpg" />
-        <title>Baovietnam - Trang tin tức 24/7</title>
+        <title>Tinhot - Trang tin tức 24/7</title>
       </Head>
       <div className="main">
         <div className="home-page">
