@@ -29,21 +29,27 @@ const Home: NextPage = ({ data, pagination }: any) => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
-          content="Luxury.tk - Chuyên trang tổng hợp những bài viết tin tức về công nghệ, lập trình IT"
+          content="Baovietnam.tk - Chuyên trang tổng hợp những bài viết tin tức về công nghệ, lập trình IT"
         />
-        <meta property="og:title" content={`Lập trình và An toàn thông tin | ${'KmaIT.tk'}`} />
+        <meta
+          property="og:title"
+          content="Baovietnam.tk - Chuyên trang tổng hợp những bài viết tin tức về công nghệ, lập trình IT"
+        />
         <meta
           property="og:description"
-          content="Luxury.tk là website tin tức chuyên tổng hợp từ các website khác nhau về nghành công nghệ thông tin, website không mang tính thương mại , website luôn ghi rõ nguồn bài viết và tôn trọng tác quyền các bài viết đó"
+          content="Baovietnam.tk là website tin tức chuyên tổng hợp từ các website khác nhau về nghành công nghệ thông tin, website không mang tính thương mại , website luôn ghi rõ nguồn bài viết và tôn trọng tác quyền các bài viết đó"
         />
         <meta property="og:type" content="webiste" />
-        <meta property="og:image" content={`${'https://www.kmait.tk/'}static/images/haolux.jpg`} />
+        <meta
+          property="og:image"
+          content={`https://microvn.net/_next/image?url=https://service.microvn.net/content/images/2021/11/ddn2714-crop-1635936936205.jpeg&w=1040&q=80`}
+        />
         <meta
           property="og:image:secure_url"
-          content={`${'https://www.kmait.tk/'}static/images/haolux.jpg`}
+          content={`https://microvn.net/_next/image?url=https://service.microvn.net/content/images/2021/11/ddn2714-crop-1635936936205.jpeg&w=1040&q=80`}
         />
         <meta property="og:image:type" content="image/jpg" />
-        <title>Luxury - Trang tin tức 24/7</title>
+        <title>Baovietnam - Trang tin tức 24/7</title>
       </Head>
       <div className="main">
         <div className="home-page">
