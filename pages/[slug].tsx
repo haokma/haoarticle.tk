@@ -1,14 +1,41 @@
-import * as React from 'react';
+import React, { useEffect, useState } from 'react';
 import renderHTML from 'html-react-parser';
 import Link from 'next/link';
 import Head from 'next/head';
 import { useRouter } from 'next/dist/client/router';
+import { ArticleItem } from '@/components/common';
 export interface ArticleDetailProps {
   article: any;
 }
 
 export default function ArticleDetail(props: ArticleDetailProps) {
+  const router = useRouter();
   const { article } = props;
+  const { slug } = router.query;
+
+  const [articleRelate, setActicleRelate] = useState([]);
+
+  useEffect(() => {
+    async function updateArticleViews() {
+      await fetch(`https://article01.herokuapp.com/api/article/${slug}`, {
+        method: 'PUT',
+      });
+    }
+    updateArticleViews();
+  }, [slug]);
+
+  useEffect(() => {
+    async function fetchArticleRelate() {
+      const { slug } = article.tags[0];
+      const res = await fetch(
+        `https://article01.herokuapp.com/api/article/getRelate?tagId=${slug}`
+      );
+      const data = await res.json();
+      console.log(data);
+      setActicleRelate(data.articleList);
+    }
+    fetchArticleRelate();
+  }, []);
 
   return (
     <>
@@ -24,16 +51,28 @@ export default function ArticleDetail(props: ArticleDetailProps) {
         <title>{article.article_title}</title>
       </Head>
       <div className="article-detail">
-        <div className="row">
-          <div className="col-xl-8  mr-auto">
-            <div>{renderHTML(article.article_content)}</div>
-            <div className="footer">
-              <span>Bài viết này được lấy từ nguồn:</span>
-              <Link href={`${article.article_source_link}`}>
-                <a>
-                  <span className="source_name">{article.article_source.source_name}</span>
-                </a>
-              </Link>
+        <div className="article-detail-main">
+          <div className="row">
+            <div className="col-xl-8  mr-auto">
+              <div>{renderHTML(article.article_content)}</div>
+              <div className="footer">
+                <span>Bài viết này được lấy từ nguồn:</span>
+                <Link href={`${article.article_source_link}`}>
+                  <a>
+                    <span className="source_name">{article.article_source.source_name}</span>
+                  </a>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="article-relate">
+          <div className="row">
+            <div className="col-xl-8 offset-xl-2">
+              <h2 className="article-relate-title">CÓ THỂ BẠN QUAN TÂM</h2>
+              {articleRelate.map((item: any, index: number) => {
+                return <ArticleItem article={item} key={index} />;
+              })}
             </div>
           </div>
         </div>

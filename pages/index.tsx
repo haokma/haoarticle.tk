@@ -1,10 +1,14 @@
 import { ArticleItem } from '@/components/common';
 import { SlidePost } from '@/components/home';
+import TagList from '@/components/home/tagList';
 import { TopView } from '@/components/home/topView';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useState } from 'react';
+import useSWR from 'swr';
 const Home: NextPage = ({ data, pagination }: any) => {
+  const { data: tag } = useSWR('/tag');
+
   const [article, setArtile] = useState(data);
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
@@ -71,7 +75,10 @@ const Home: NextPage = ({ data, pagination }: any) => {
                 )}
               </div>
               <div className="col-xl-4 col-lg-4">
-                <TopView data={article} />
+                <div className="home-left">
+                  <TopView data={article} />
+                  <TagList tagList={tag?.tags} />
+                </div>
               </div>
             </div>
           </div>

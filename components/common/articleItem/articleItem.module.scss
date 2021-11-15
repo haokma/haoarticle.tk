@@ -9,12 +9,12 @@
 }
 .image img {
   border-radius: 1rem;
-  min-height: 20rem;
+  min-height: 16rem;
   object-fit: cover;
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 600;
   overflow: hidden;
   display: -webkit-box;
@@ -29,7 +29,7 @@
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
 }
 .tags {
   font-size: 1.4rem;
@@ -41,7 +41,7 @@
 
 .footer {
   display: flex;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   align-items: center;
 }
 .footerImage {
